@@ -1,7 +1,9 @@
 const path = require('path');// varibale for path //
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'; // varibale for mode //
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //varibale plugin for css min//
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 
 module.exports = {
     mode: mode,
@@ -9,7 +11,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js', //*TODO can be change to any name **//
-        path: path.resolve(__dirname, 'dist')   //*TODO can be change to any folder path**//
+        path: path.resolve(__dirname, 'dist'),   //*TODO can be change to any folder path**//
+        assetModuleFilename: 'images/[hash][ext][query]'
     },
 
 
@@ -28,6 +31,12 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            //IMG Asset/Css Loader
+            {
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+                // More information here https://webpack.js.org/guides/asset-modules/
+                type: "asset",
+            },
 
             //BABEL LOADER
             {
@@ -42,7 +51,9 @@ module.exports = {
     },
 
 
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin()],
 
     devtool: 'source-map',
 
