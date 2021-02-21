@@ -1,6 +1,4 @@
-# Webpack 5 Config
-
-![Webpack plugin icon](/markdown-documents/webpack-226064.png)
+# Webpack 5 Config ![Webpack plugin icon](/markdown-documents/webpack-icon.png)
 
 This is my webpack 5 **version 1.0.0** config file which is use for my development
 
