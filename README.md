@@ -1,6 +1,6 @@
 # Webpack 5 Config
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwebpack.js.org%2Fblog%2F2020-10-10-webpack-5-release%2F&psig=AOvVaw1UhvqngoEl48_o0fz32otK&ust=1614024753872000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPifuPPk--4CFQAAAAAdAAAAABAm"
+<img src="/markdown-documents/webpack-226064.png"
      alt="Webpack plugin icon"
      style="float: left; margin-right: 10px;" />
 
