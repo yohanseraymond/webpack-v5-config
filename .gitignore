@@ -1,3 +1,4 @@
 node_modules
 .vscode
-# public --remove when you dont want to publish 
+public            
+#comment public when you want to publish 
