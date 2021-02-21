@@ -2,7 +2,7 @@
 
 <img src="/markdown-documents/webpack-226064.png"
 alt="Webpack plugin icon"
-style="float: left; margin-right: 10px;" width="10px"; height="10px"; />
+style="float: left; margin-right: 10px; width=10px; height:10px;" />
 
 This is my webpack 5 **version 1.0.0** config file which is use for my development
 
