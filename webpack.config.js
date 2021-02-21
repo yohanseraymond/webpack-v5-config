@@ -3,6 +3,7 @@ const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -53,7 +54,11 @@ module.exports = {
 
     plugins: [
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin()],
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+          }),
+    ],
 
     devtool: 'source-map',
 

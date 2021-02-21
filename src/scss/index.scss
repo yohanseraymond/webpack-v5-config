@@ -1,12 +1,15 @@
 $primary: rgb(0, 180, 224);
 $secondary: white;
 
-
-
-h1{
-    color: $secondary
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: $secondary;
 }
 
 body {
-    background-color: $primary
+  background-color: $primary;
 }
