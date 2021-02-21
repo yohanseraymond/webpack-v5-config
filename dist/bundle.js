@@ -1,0 +1,2 @@
+(()=>{"use strict";console.log("Hello World"),console.log("getSettings was called"),console.log("Welcome"),console.log("How are you");console.log({a:"alpha",b:"bravo",c:"charlie"})})();
+//# sourceMappingURL=bundle.js.map

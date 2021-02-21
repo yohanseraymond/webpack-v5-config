@@ -1,0 +1,1 @@
+export const profile = 'How are you'
