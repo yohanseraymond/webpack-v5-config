@@ -25,9 +25,10 @@ using the following commands:
 
 1. npm init -y
 2. npm install --> to install dev dependencies
-3. npm run build --> for production build
-4. npm run build-dev --> for development build + watching of files
-5. npm start --> to start server with hot reload
+3. npm run prod --> for production build
+4. npm run dev --> for development build
+5. npm run build-dev --> for development build + watching of files
+6. npm start --> to start server with hot reload
 
 ## Config Disclaimer
 
