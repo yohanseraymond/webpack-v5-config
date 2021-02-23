@@ -1,26 +1,27 @@
-const path = require('path'); //varibale for path //
-const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'; // varibale for mode //
+//! Webpack Merge Varible // 
+//const { merge } = require('webpack-merge');
+// const common = require('./webpack.common.js'); //TODO Comment out when you want to use webpack.common.js  and add  /* merge(common, */ to module exports: {} //
 
+//Varibles
+
+// const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'; 
 
 //PLUGIN varibales 
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
+const path = require('path');
 
 module.exports = {
-    mode: mode,
-    //Entry 
+    mode: 'production',
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js', //TODO can be change to any name //
-        path: path.resolve(__dirname, 'public'),   //TODO can be change to any folder path//
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'public'),
         publicPath: '',
-        assetModuleFilename: 'images/[hash][ext]' //TODO  
+        assetModuleFilename: 'images/[hash][ext]'
     },
-
 
     module: {
         rules: [
@@ -28,7 +29,6 @@ module.exports = {
             {
                 test: /\.(s[ac]|c)ss$/i,
                 use: [
-                    // TODO { loader: MiniCssExtractPlugin.loader,}, to remove to include css in dist folder //
                     'style-loader',
                     'css-loader',
                     'sass-loader',
@@ -37,7 +37,6 @@ module.exports = {
             //ASSET LOADER
             {
                 test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-                // More information here https://webpack.js.org/guides/asset-modules/
                 type: "asset/resource",
                 generator: {
                     filename: 'images/[hash][ext]'
@@ -49,17 +48,15 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    //** With additonal settings, this will reference .babelrc **//
                     loader: "babel-loader"
                 }
             },
-        ],
+        ]
     },
 
     //PLUGINS
     plugins: [
-        new CleanWebpackPlugin(),  
-        new MiniCssExtractPlugin(),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             cache: false,
@@ -70,10 +67,4 @@ module.exports = {
         }),
     ],
 
-    // devtool: 'source-map',      //TODO remove when in development //
-
-    devServer: {
-        contentBase: './public', //TODO can change to commit changes to the any folder for i.e dist/public/backend/admin //
-        hot: true,
-    },
 }

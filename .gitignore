@@ -1,4 +1,5 @@
 node_modules
 .vscode
-public            
+public        
+webpack.config.js    
 #comment public when you want to publish 
