@@ -24,9 +24,10 @@ Make sure the require file directory are install in the PATH folder (<https://ww
 using the following commands:
 
 1. npm init -y
-2. npm run build --> for production build
-3. npm run build-dev --> for development build + watching of files
-4. npm start --> to start server with hot reload
+2. npm install --> to install dev dependencies
+3. npm run build --> for production build
+4. npm run build-dev --> for development build + watching of files
+5. npm start --> to start server with hot reload
 
 ## Config Disclaimer
 
