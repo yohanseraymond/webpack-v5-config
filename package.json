@@ -1,7 +1,7 @@
 {
   "private": "true",
-  "name": "carwash",
-  "version": "1.0.0",
+  "name": "webpack-v5-config",
+  "version": "1.5.1",
   "description": "",
   "main": "include.preload.js",
   "scripts": {
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yohanseraymond/carwash.git"
+    "url": "git+https://github.com/yohanseraymond/webpack-v5-config.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yohanseraymond/carwash/issues"
+    "url": "https://github.com/yohanseraymond/webpack-v5-config.git/issues"
   },
-  "homepage": "https://github.com/yohanseraymond/carwash#readme",
+  "homepage": "https://github.com/yohanseraymond/webpack-v5-config.git#readme",
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-async-to-generator": "^7.12.13",
