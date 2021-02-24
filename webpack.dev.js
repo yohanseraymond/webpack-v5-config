@@ -4,6 +4,7 @@
 
 //PLUGIN varibales 
 
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -11,9 +12,11 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        index: ['./src/index.js']
+    },
     output: {
-        filename: 'index.js',
+        filename: 'include.preload.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '',
         assetModuleFilename: 'images/[hash][ext]'
@@ -25,7 +28,7 @@ module.exports = {
             {
                 test: /\.(s[ac]|c)ss$/i,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
@@ -52,6 +55,7 @@ module.exports = {
 
     //PLUGINS
     plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
