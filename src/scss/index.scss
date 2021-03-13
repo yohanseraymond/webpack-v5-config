@@ -1,20 +1,3 @@
-$primary: rgb(0, 180, 224);
-$secondary: white;
-
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
-h1 {
-  color: $secondary;
-}
-
-body {
-  background: url(/src/images/car.jpg) no-repeat;
-  height: 1080px;
-  width: 1920px;
-  background-color: $primary;
-}
-
-
